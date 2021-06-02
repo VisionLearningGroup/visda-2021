@@ -10,6 +10,7 @@ layout: default
 
 <!-- [<a href = "#news">News</a>] -->
 [<a href = "#overview">Overview</a>]
+[<a href = "#data">Data</a>]
 <!-- [<a href = "https://github.com/VisionLearningGroup/visda-2019-public">Data and Code</a>] -->
 [<a href= "#prizes">Prizes</a>]
 [<a href = "#evaluation">Evaluation</a>]
@@ -17,7 +18,7 @@ layout: default
 [<a href = "#faq">FAQ</a>] 
 <!-- [<a href = "https://sites.google.com/view/task-cv2019">TASK-CV Workshop</a>] -->
 [<a href = "#organizers">Organizers</a>]
-<!--[<a href = "#sponsors">Sponsors</a>]-->
+[<a href = "#sponsors">Sponsors</a>]
 </br> </br> </nr>
 
 <a name = "news"></a>
@@ -31,6 +32,46 @@ layout: default
 <figure>
 <img class="img-responsive" style="dipslay:block;margin-left:auto;margin-right:auto" src="assets/images/visda2021.png"/>
 </figure>
+
+<a name = "data"></a>
+<h2 class="section-title"> Data </h2>
+<ul>
+	<li><b>Training set:</b> images and object labels from the standard <a href="https://image-net.org/download.php">ImageNet 1000-class</a> training dataset. No other training data is permitted, but data augmentation is allowed (see rules).
+</li>
+<li><b>Development set:</b> images and labels sampled from <a href="https://arxiv.org/abs/1903.12261">ImageNet-C(orruptions)</a>,  <a href="https://arxiv.org/abs/2006.16241">ImageNet-R(enditions)</a> and <a href="https://objectnet.dev/objectnet-a-large-scale-bias-controlled-dataset-for-pushing-the-limits-of-object-recognition-models.pdf">ObjectNet</a>. The dev set can be used for model development, but cannot be used to train the final submitted model, only to validate it to tune hyperparameters. The dev domain contains some (but not necessarily all) source classes and some novel classes.</li>
+<li>
+	<b>Test set</b>: similar to the development set but with a different input distribution and category composition. No labels will be released for the test set.
+</li>
+</ul>
+
+</br>
+</br>
+
+<a name = "prizes"></a>
+<h2 class="section-title"> Prizes </h2>
+
+<p> The top three teams will receive prizes such as NVIDIA GPUs or gift cards. More details to be announced. </p>
+
+<a name = "evaluation"></a>
+<h2 class="section-title"> Evaluation </h2>
+
+We will use CodaLab to evaluate submissions and maintain a leaderboard. 
+
+A team’s score on the leaderboard will be determined using a combination of two metrics: classification accuracy (ACC) and area under the ROC curve (AUC). The accuracy is computed on the known (inlier) categories only. The AUC measures unknown (outlier) category detection and is the area under the ROC curve computed by thresholding a score that represents how likely the input is to be an unknown class.
+
+We will soon be releasing detailed instructions and a development kit for specific details on submission formatting and computing the evaluation metrics.
+
+
+<a name = "rules"></a>
+<h2 class="section-title"> Rules </h2>
+
+The VisDA challenge tests adaptation and model transfer, so the rules are different from most other challenges. Please read them carefully. </br> </br> 
+<ul>
+<li>Supervised Training: Teams may only submit test results of models trained on the source domain data. To ensure equal comparison, we do not allow training on any other external data or any form of manual data labeling.</li>
+<li>Unsupervised training: Models can be adapted (trained) on the test data in an unsupervised way, i.e. without labels.</li>
+<li>Source-only Models: The performance of a domain adaptation algorithm greatly depends on the baseline performance of the model trained only on source data. For example, ResNet-50 will work better than AlexNet. We ask that teams submit two sets of results: 1) predictions obtained only with the source-trained model, and 2) predictions obtained with the adapted model. See the development kit for submission formatting details.</li>
+<li>Leaderboard: The main leaderboard for each competition track will show results of adapted models and will be used to determine the final team ranks.</li>
+</ul>
 
 <!-- 
 <p>Introducing the 2019 VisDA Challenge! This year we are using a new <a href="http://ai.bu.edu/M3SDA/">[DomainNet dataset]</a> to promote <b>Multi-Source Domain Adaptation</b> and <b>Semi-Supervised Domain Adaptation</b> tasks. For details about last year's challenges and winning methods, see VisDA <a href = "http://ai.bu.edu/visda-2017/">[2017]</a> and <a href = "http://ai.bu.edu/visda-2018/">[2018]</a> pages.</p>
@@ -246,6 +287,11 @@ One  submission example can be found with the following link: <a href="https://g
 
  -->
 
+<a name = "sponsors"></a>
+<h2 class="section-title"> Sponsors </h2>
+
+<img src="https://midas.bu.edu/images/logos/BU-logo.png"  height="100">
+
 <a name = "organizers"></a>
 <h2 class="section-title"> Organizers </h2>
 
@@ -254,6 +300,7 @@ Kate Saenko (BU & MIT-IBM Watson AI), Kuniaki Saito (BU), Donghyun Kim (BU), Sam
 </br>
 </br>
 
+[1] OVANet: One-vs-All Network for Universal Domain Adaptation, Kuniaki Saito and Kate Saenko. 
 <!-- <a name = "acknowledgement"></a>
 <h2 class="section-title"> Acknowledgement </h2>
 
