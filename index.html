@@ -71,8 +71,9 @@ The VisDA challenge tests adaptation and model transfer, so the rules are differ
 <ul>
 <li>Supervised Training: Teams may only submit test results of models trained on the source domain data. To ensure equal comparison, we do not allow training on any other external data or any form of manual data labeling.</li>
 <li>Unsupervised training: Models can be adapted (trained) on the test data in an unsupervised way, i.e. without labels.</li>
-<li>Source-only Models: The performance of a domain adaptation algorithm greatly depends on the baseline performance of the model trained only on source data. For example, ResNet-50 will work better than AlexNet. We ask that teams submit two sets of results: 1) predictions obtained only with the source-trained model, and 2) predictions obtained with the adapted model. See the development kit for submission formatting details.</li>
+<li>Source-only Models: The performance of a domain adaptation algorithm greatly depends on the baseline performance of the model trained only on source data. For example, ResNet-50 will work better than AlexNet. We ask that teams submit two sets of results: 1) predictions obtained only with the source-trained model, and 2) predictions obtained with the adapted model. Note that the source-only performance <b>will not</b> affect the ranking. See the development kit for submission formatting details.</li>
 <li>Leaderboard: The main leaderboard for each competition track will show results of adapted models and will be used to determine the final team ranks.</li>
+<li>Model size: To encourage improvements in universal domain adaptation, rather than general optimization or underlying model architectures, models must be limited to a total size of 100 million parameters. Model ensembling is also not allowed.
 </ul>
 
 </br>
@@ -103,8 +104,6 @@ Yes, so long as teams do not have any overlapping members, i.e. one person can o
 No.</li>
 <li><b> Are challenge participants required to reveal all the details of their methods?</b>
 Yes, but only the top performing teams. To qualify to win, teams are required to include a four+ page report describing their methods and submit their code and model so that we can reproduce their results. The winners’ reports will be posted on the challenge website; open sourcing the code is optional but highly encouraged.</li>
-<li><b> Are there any restrictions on the model or algorithm?</b>
-To encourage improvements in universal domain adaptation, rather than general optimization or underlying model architectures, models must be limited to a total size of 100 million parameters. Model ensembling is also not allowed.</li>
 </ul>
 
 <!-- 
