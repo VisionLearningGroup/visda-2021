@@ -37,7 +37,8 @@ layout: default
 	<li> <b> June 23rd: </b> the official devkit and with data urls are released on <a href="https://github.com/VisionLearningGroup/visda21-dev">[github]</a>. </li>
 	<li> <b> July 7th: </b> the evaluation server and the leaderboard are up on <a href="https://competitions.codalab.org/competitions/33396">[codalab]</a>
 	<li> <b> July 26th: </b> the technical report describing the challenge is avaliable on <a href="https://arxiv.org/abs/2107.11011">[arxiv]</a>.
-	<li> <b> July 28th: </b> the <a href="#prizes">[prize fund]</a> is finalized.
+	<li> <b> July 28th: </b> the <a href="#prizes">[prize fund]</a> is finalized
+	<li> <b> Aug 10th: </b> the <a href="#rules">[rules]</a> regarding ensembling and energy efficiency are updated.
 </ul>
 </p>
 
@@ -97,7 +98,9 @@ The VisDA challenge tests adaptation and model transfer, so the rules are differ
 <li>Unsupervised training: Models can be adapted (trained) on the test data in an unsupervised way, i.e. without labels.</li>
 <li>Source-only Models: The performance of a domain adaptation algorithm greatly depends on the baseline performance of the model trained only on source data. For example, ResNet-50 will work better than AlexNet. We ask that teams submit two sets of results: 1) predictions obtained only with the source-trained model, and 2) predictions obtained with the adapted model. Note that the source-only performance <b>will not</b> affect the ranking. See the development kit for submission formatting details.</li>
 <li>Leaderboard: The main leaderboard for each competition track will show results of adapted models and will be used to determine the final team ranks.</li>
-<li>Model size: To encourage improvements in universal domain adaptation, rather than general optimization or underlying model architectures, models must be limited to a total size of 100 million parameters. Model ensembling is also not allowed.
+<li>Model size: To encourage improvements in universal domain adaptation, rather than general optimization or underlying model architectures, models must be limited to a total size of 100 million parameters. </li>
+<li>Ensembling: Ensembling is now allowed, but each additional forward pass through a parameter will count towards the total number of parameters allowed (100M). For example, an ensemble that passes through a 50M model twice will count as 100M towards the parameter cap.</li>
+<li>Energy efficiency: Teams must report the total training time of the submitted model which should be reasonable (which we define as not exceeding 100 GPU days of V100 (16GB version) but contact us if unsure). Energy efficient solutions will be highlighted even if they do not finish in the top three. </li>
 </ul>
 
 </br>
