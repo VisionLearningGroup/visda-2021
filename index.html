@@ -100,6 +100,7 @@ The VisDA challenge tests adaptation and model transfer, so the rules are differ
 <li>Leaderboard: The main leaderboard for each competition track will show results of adapted models and will be used to determine the final team ranks.</li>
 <li>Model size: To encourage improvements in universal domain adaptation, rather than general optimization or underlying model architectures, models must be limited to a total size of 100 million parameters. </li>
 <li>Ensembling: Ensembling is now allowed, but each additional forward pass through a parameter will count towards the total number of parameters allowed (100M). For example, an ensemble that passes through a 50M model twice will count as 100M towards the parameter cap.</li>
+<li>Pseudo-labeling: If you use an additional step (e.g. a pseudo-labeling model) for trainig, but you do not use it during inference, it does not count towards the 100M parameter limit. </li>
 <li>Energy efficiency: Teams must report the total training time of the submitted model which should be reasonable (which we define as not exceeding 100 GPU days of V100 (16GB version) but contact us if unsure). Energy efficient solutions will be highlighted even if they do not finish in the top three. </li>
 </ul>
 
